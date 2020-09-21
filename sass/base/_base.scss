@@ -1,1 +1,18 @@
-// a partial sass file
+// the basic definition about the entire project
+*, 
+*::after
+*::before { 
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;   
+     /*change the box sizing so that the borders and the padding are no longer added to the total width or the total height that we specify for a box */
+}
+
+html {
+    //this defines what 1rem is
+    font-size: 62.35%; /*62.25 of the standard 16px browsers */
+}
+
+body { 
+    box-sizing: border-box;
+}
