@@ -1,6 +1,6 @@
 .row {
     max-width: $grid-width;
-    background-color: #eeeeee;
+
     margin: 0 auto;
      //to center a block element inside another block element
     &:not(:last-child) {
@@ -9,8 +9,7 @@
 
     @include clearfix;
 
-    [class^="col-"] { //attribute selector //select all the element thats  starts with col- // another sign is * whish means select all the class that contain col - // another would be $ which means select all the class that ends with col-
-        background-color: red;
+    [class^="col-"] { //attribute selector //select all the element thats  starts with col- // another sign is * whish means select all the class that contain col - // another would be $ which means select all the class that ends with col-;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
