@@ -1,7 +1,7 @@
 .btn {
-
+    &, //with this we could apply these classes to the button element too
     &:link, 
-    &:visited {
+    &:visited { //the <buuton> element does not have these pseudo classes
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
@@ -10,6 +10,11 @@
         transition: all 1s; /* all the property, the time it takes to apply the proery*/
         position: relative;
         font-size:  $default-font-size;
+
+        //change for the <button> element 
+
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -22,7 +27,9 @@
         }
     }
 
-    &:active { /*when we clicke it */
+    &:active,
+    &:focus { /*when we clicke it */
+    outline: none;
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba($color-black, 0.2); /* the last value is the blure effect */
 

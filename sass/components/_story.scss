@@ -1,0 +1,61 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        overflow: hidden;
+        -webkit-shape-outside: circle(50% at 50% 50%); //the first number is the raduis the second is the horizontal length, the last one is for the vertical length.
+        shape-outside: circle(50% at 50% 50%); //only works if the element is floated, and has defined deminsions i.e width and height. this property defines the shape which the text will be wrapped like. what a content floats around the element
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg); //when eleemnt is floated the best thing to give it space is by using transform so u dont mass up with the padding or the marign.
+        position: relative;
+    }
+
+    &__img {
+        height: 100%; //the 100% of the parent
+        transform: translateX(-4rem) scale(1.4);
+        transition: all .5s;
+
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(.3rem) brightness(80%);
+    
+    }
+
+}
+
