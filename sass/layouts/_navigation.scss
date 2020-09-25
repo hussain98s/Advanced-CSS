@@ -149,7 +149,7 @@
     }
 
     &__checkbox:checked + &__button &__icon {
-        background-color: transparent; //this is only the span element which is the middle line in the
+        background-color: transparent; //this is only the span element which is the middle line in
     }
 
     &__checkbox:checked + &__button &__icon::before {
