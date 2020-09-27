@@ -33,7 +33,7 @@ ORDER: Base + typography > general layout + grid > page layout > components // t
 1em = 16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
+    @if $breakpoint == phone { //only screen, for ex if someone tries to print the page these media qurey will not apply
         @media only screen and (max-width: 37.5em) { @content };    //600px // in media queries the rem and em is only effected by the browser's default setting, and we chose em not rem beccause the rem method failes in some browsers. em is the best solution for media queries.
     }
     @if $breakpoint == tab-port {

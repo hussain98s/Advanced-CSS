@@ -162,9 +162,9 @@
 
 
 
-    @include respond(tab-port) {
+    // @include respond(tab-port) {
     @media only screen and (max-width: 56.25em),
-            only screen and (hover: none) {
+            only screen and (hover: none) { //or with touch device, which we cannot hover
 
         height: auto;
         border-radius: 3px;
@@ -210,6 +210,4 @@
         }
     }
 
-
-    }
 }
